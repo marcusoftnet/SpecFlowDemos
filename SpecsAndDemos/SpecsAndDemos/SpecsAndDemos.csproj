@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E7F2C29-A3A1-4E99-8E01-BF99C9002463}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpecsAndDemos</RootNamespace>
+    <AssemblyName>SpecsAndDemos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImpromptuInterface">
+      <HintPath>..\packages\ImpromptuInterface.5.6.7\lib\net40\ImpromptuInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Should.Fluent">
+      <HintPath>..\packages\ShouldFluent.1.1.19\lib\Should.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Assist.Dynamic">
+      <HintPath>..\packages\SpecFlow.Assist.Dynamic.1.0.2\lib\40\SpecFlow.Assist.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00BasicGherkin\BasicGherkin1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BasicGherkin.feature</DependentUpon>
+    </Compile>
+    <Compile Include="00BasicGherkin\BasicGherkinSteps.cs" />
+    <Compile Include="01TestRunner\TestRunnerDemoSteps.cs" />
+    <Compile Include="01TestRunner\TestRunnerIsNotImportant1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestRunnerIsNotImportant.feature</DependentUpon>
+    </Compile>
+    <Compile Include="02TagsAndHooks\Hooks1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hooks.feature</DependentUpon>
+    </Compile>
+    <Compile Include="02TagsAndHooks\HooksDemoSteps.cs" />
+    <Compile Include="02TagsAndHooks\TagDemo1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TagDemo.feature</DependentUpon>
+    </Compile>
+    <Compile Include="02TagsAndHooks\TagDemoSteps.cs" />
+    <Compile Include="031ScenarioContext\ScenarioContext1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScenarioContext.feature</DependentUpon>
+    </Compile>
+    <Compile Include="031ScenarioContext\ScenarioContextSteps.cs" />
+    <Compile Include="032FeatureContext\FeatureContextFeatures1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeatureContextFeatures.feature</DependentUpon>
+    </Compile>
+    <Compile Include="032FeatureContext\FeatureContextSteps.cs" />
+    <Compile Include="03ScenarioOutline\ScenarioOutline1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScenarioOutline.feature</DependentUpon>
+    </Compile>
+    <Compile Include="03ScenarioOutline\ScenarioOutlineTests.cs" />
+    <Compile Include="04Background\BackgroundFeature1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BackgroundFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="04Background\BackgroundSteps.cs" />
+    <Compile Include="05TablesAndAssist\TableScenario1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TableScenario.feature</DependentUpon>
+    </Compile>
+    <Compile Include="05TablesAndAssist\TableSteps.cs" />
+    <Compile Include="06CompareToAssist\CompareTo1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompareTo.feature</DependentUpon>
+    </Compile>
+    <Compile Include="06CompareToAssist\CompareToSteps.cs" />
+    <Compile Include="07Svenska\Svenska1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Svenska.feature</DependentUpon>
+    </Compile>
+    <Compile Include="07Svenska\SvenskaSteg.cs" />
+    <Compile Include="08AttributeOverloading\AttributeOverloading1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttributeOverloading.feature</DependentUpon>
+    </Compile>
+    <Compile Include="08AttributeOverloading\AttributeOverloadingSteps.cs" />
+    <Compile Include="09CallingStepsFromSteps\CallingStepsFromStepDefinitionSteps.cs" />
+    <Compile Include="09CallingStepsFromSteps\CallingStepsFromSteps1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CallingStepsFromSteps.feature</DependentUpon>
+    </Compile>
+    <Compile Include="10StepTransformation\Entities\Terminal.cs" />
+    <Compile Include="10StepTransformation\Entities\User.cs" />
+    <Compile Include="10StepTransformation\StepTransformation1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StepTransformation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="10StepTransformation\StepTransformationSteps.cs" />
+    <Compile Include="10StepTransformation\Transformations\DateConverter.cs" />
+    <Compile Include="10StepTransformation\Transformations\TerminalConverter.cs" />
+    <Compile Include="10StepTransformation\Transformations\UserConverter.cs" />
+    <Compile Include="11ContextInjection\ContextInjection1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContextInjection.feature</DependentUpon>
+    </Compile>
+    <Compile Include="11ContextInjection\Contexts\NestedContext.cs" />
+    <Compile Include="11ContextInjection\Contexts\SingleContext.cs" />
+    <Compile Include="11ContextInjection\FeatureWithADependentContextSteps.cs" />
+    <Compile Include="11ContextInjection\FeatureWithARecursiveContextSteps.cs" />
+    <Compile Include="11ContextInjection\FeatureWithASingleContextSteps.cs" />
+    <Compile Include="11ContextInjection\FeatureWithMultipleContextsSteps.cs" />
+    <Compile Include="11ContextInjection\FeatureWithNoContextSteps.cs" />
+    <Compile Include="12ScopedSteps\ScopedSteps1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScopedSteps.feature</DependentUpon>
+    </Compile>
+    <Compile Include="12ScopedSteps\ScopedStepsSteps.cs" />
+    <Compile Include="12ScopedSteps\StepsWithScopeOnTag.cs" />
+    <Compile Include="30SpecFlowAssistDynamic\ComparingDynamicInstances1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparingDynamicInstances.feature</DependentUpon>
+    </Compile>
+    <Compile Include="30SpecFlowAssistDynamic\ComparingDynamicSets1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparingDynamicSets.feature</DependentUpon>
+    </Compile>
+    <Compile Include="30SpecFlowAssistDynamic\CreateDynamicSetsAndInstancesWithStepArgumentTransformation1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateDynamicSetsAndInstancesWithStepArgumentTransformation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="30SpecFlowAssistDynamic\DynamicInstancesFromTable1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DynamicInstancesFromTable.feature</DependentUpon>
+    </Compile>
+    <Compile Include="30SpecFlowAssistDynamic\StepDefinitions\DynamicInstanceComparisionSteps.cs" />
+    <Compile Include="30SpecFlowAssistDynamic\StepDefinitions\DynamicInstanceCreationSteps.cs" />
+    <Compile Include="30SpecFlowAssistDynamic\StepDefinitions\DynamicSetComparisonSteps.cs" />
+    <Compile Include="30SpecFlowAssistDynamic\StepDefinitions\DynamicSetCreationSteps.cs" />
+    <Compile Include="30SpecFlowAssistDynamic\StepDefinitions\State.cs" />
+    <Compile Include="30SpecFlowAssistDynamic\StepDefinitions\StepArgumentTransformationSteps.cs" />
+    <Compile Include="99TestEntities\Person.cs" />
+    <Compile Include="99TestEntities\Style.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="00BasicGherkin\BasicGherkin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BasicGherkin1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="01TestRunner\TestRunnerIsNotImportant.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestRunnerIsNotImportant1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="02TagsAndHooks\Hooks.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Hooks1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="02TagsAndHooks\TagDemo.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TagDemo1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="031ScenarioContext\ScenarioContext.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ScenarioContext1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="032FeatureContext\FeatureContextFeatures.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FeatureContextFeatures1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="03ScenarioOutline\ScenarioOutline.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ScenarioOutline1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="04Background\BackgroundFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BackgroundFeature1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="05TablesAndAssist\TableScenario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TableScenario1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="06CompareToAssist\CompareTo.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CompareTo1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="07Svenska\Svenska.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Svenska1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="08AttributeOverloading\AttributeOverloading.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AttributeOverloading1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="09CallingStepsFromSteps\CallingStepsFromSteps.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CallingStepsFromSteps1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="10StepTransformation\StepTransformation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>StepTransformation1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="11ContextInjection\ContextInjection.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContextInjection1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="12ScopedSteps\ScopedSteps.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ScopedSteps1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="30SpecFlowAssistDynamic\ComparingDynamicInstances.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ComparingDynamicInstances1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="30SpecFlowAssistDynamic\ComparingDynamicSets.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ComparingDynamicSets1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="30SpecFlowAssistDynamic\CreateDynamicSetsAndInstancesWithStepArgumentTransformation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateDynamicSetsAndInstancesWithStepArgumentTransformation1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="30SpecFlowAssistDynamic\DynamicInstancesFromTable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DynamicInstancesFromTable1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="30SpecFlowAssistDynamic\DynamicSetFromTable.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DynamicSetFromTable1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
